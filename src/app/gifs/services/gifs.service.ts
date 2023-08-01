@@ -60,12 +60,12 @@ export class GifsService {
       .set('q', tag)
 
     this.http.get<SearchResponse>(`${ this.serviceUrl }/search?`,{ params })
-        .subscribe( resp => {
+      .subscribe( resp => {
 
-          this.gifList = resp.data;
-          console.log({ gifs: this.gifList })
+        this.gifList = resp.data;
+        console.log({ gifs: this.gifList })
 
-        });
+      });
   }
 
 
